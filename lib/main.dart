@@ -37,6 +37,7 @@ class MyHomePage extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 15),
               width: double.infinity,
               decoration: BoxDecoration(color: Colors.orange[400]),
+
               child: Column(
                 children: [
                   Text(
@@ -234,16 +235,72 @@ class SecondPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              child: Column(
+              padding: EdgeInsets.all(15),
+              width: double.infinity,
+
+              child: Row(
                 children: [
                   ClipOval(
                     child: Image.network(
                       "https://www.politico.com/dims4/default/resize/1290/quality/90/format/webp?url=https%3A%2F%2Fstatic.politico.com%2F78%2F09%2F0030a6a14a67bda8c162dcdcf225%2F201216-snowden-getty-773.jpg",
-                      width: 150,
-                      height: 150,
+                      width: 100,
+                      height: 100,
                       fit: BoxFit.cover,
                     ),
                   ),
+                  Column(children: [Text("5"), Text("กำลังติดตาม")]),
+                  Column(children: [Text(" | ")]),
+                  Column(children: [Text("1.55 M"), Text("ติดตาม")]),
+                  Column(children: [Text(" | ")]),
+                  Column(children: [Text("590.7 K"), Text("ถูกใจและบันทึก")]),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 15),
+
+            Container(
+              padding: EdgeInsets.all(15),
+              width: double.infinity,
+
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text("Takdanai Duangporn"),
+                      Icon(Icons.verified, color: Colors.blue),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.tiktok, color: Colors.black),
+                      Text("fr05ty"),
+                      Icon(Icons.arrow_drop_down, color: Colors.black),
+                    ],
+                  ),
+
+                  SizedBox(height: 15),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(15),
+              width: double.infinity,
+
+              child: Row(
+                children: [
+                  FilledButton(
+                    onPressed: () {},
+                    child: Text("ติดตาม"),
+                    style: FilledButton.styleFrom(
+                      backgroundColor: Colors.yellow[500],
+                      foregroundColor: Colors.black,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ),
+                  // Icon(Icons.settings)
                 ],
               ),
             ),
