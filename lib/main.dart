@@ -243,16 +243,64 @@ class SecondPage extends StatelessWidget {
                   ClipOval(
                     child: Image.network(
                       "https://www.politico.com/dims4/default/resize/1290/quality/90/format/webp?url=https%3A%2F%2Fstatic.politico.com%2F78%2F09%2F0030a6a14a67bda8c162dcdcf225%2F201216-snowden-getty-773.jpg",
-                      width: 100,
-                      height: 100,
+                      width: 75,
+                      height: 75,
                       fit: BoxFit.cover,
                     ),
                   ),
-                  Column(children: [Text("5"), Text("กำลังติดตาม")]),
-                  Column(children: [Text(" | ")]),
-                  Column(children: [Text("1.55 M"), Text("ติดตาม")]),
-                  Column(children: [Text(" | ")]),
-                  Column(children: [Text("590.7 K"), Text("ถูกใจและบันทึก")]),
+
+                  SizedBox(width: 20),
+
+                  Column(
+                    children: [
+                      Text(
+                        "5",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                      Text("กำลังติดตาม"),
+                    ],
+                  ),
+
+                  SizedBox(width: 10),
+
+                  Container(width: 1, height: 40, color: Colors.grey),
+
+                  SizedBox(width: 10),
+
+                  Column(
+                    children: [
+                      Text(
+                        "1.55 M",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                      Text("ผู้ติดตาม"),
+                    ],
+                  ),
+
+                  SizedBox(width: 10),
+
+                  Container(width: 1, height: 40, color: Colors.grey),
+
+                  SizedBox(width: 10),
+
+                  Column(
+                    children: [
+                      Text(
+                        "590.7 K",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                      Text("ถูกใจและบันทึก"),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -260,49 +308,106 @@ class SecondPage extends StatelessWidget {
             SizedBox(height: 15),
 
             Container(
-              padding: EdgeInsets.all(15),
+              padding: EdgeInsets.symmetric(horizontal: 15),
               width: double.infinity,
 
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+
                 children: [
                   Row(
                     children: [
-                      Text("Takdanai Duangporn"),
+                      Text(
+                        "Takdanai Duangporn",
+                        style: TextStyle(
+                          fontFamily: 'Kanit',
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+
+                      SizedBox(width: 5),
+
                       Icon(Icons.verified, color: Colors.blue),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Icon(Icons.tiktok, color: Colors.black),
-                      Text("fr05ty"),
-                      Icon(Icons.arrow_drop_down, color: Colors.black),
                     ],
                   ),
 
                   SizedBox(height: 15),
+
+                  Row(
+                    children: [
+                      Icon(Icons.tiktok, size: 20),
+
+                      SizedBox(width: 5),
+
+                      Text("fr05ty"),
+                      Icon(Icons.arrow_drop_down),
+                    ],
+                  ),
                 ],
               ),
             ),
+
             Container(
               padding: EdgeInsets.all(15),
               width: double.infinity,
 
               child: Row(
                 children: [
-                  FilledButton(
-                    onPressed: () {},
-                    child: Text("ติดตาม"),
-                    style: FilledButton.styleFrom(
-                      backgroundColor: Colors.yellow[500],
-                      foregroundColor: Colors.black,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                  SizedBox(
+                    width: 330,
+
+                    child: FilledButton(
+                      onPressed: () {},
+                      style: FilledButton.styleFrom(
+                        backgroundColor: Colors.yellow[600],
+                        foregroundColor: Colors.black,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+
+                      child: Text(
+                        "ติดตาม",
+                        style: TextStyle(
+                          fontFamily: 'Kanit',
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
-                  // Icon(Icons.settings)
+
+                  SizedBox(width: 15),
+
+                  Icon(Icons.settings),
                 ],
               ),
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 180,
+                  height: 200,
+                  child: Image.network(
+                    "https://media.npr.org/assets/img/2019/09/18/freshair2_wide-749c0436c788133c1374bfd82e486827447574ac.jpg?s=800&c=85&f=webp",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+
+                SizedBox(width: 15,),
+
+                SizedBox(
+                  width: 180,
+                  height: 200,
+                  child: Image.network(
+                    "https://fortune.com/img-assets/wp-content/uploads/2024/06/GettyImages-459251249-e1718388631239.jpg?format=webp&w=768&q=75",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
