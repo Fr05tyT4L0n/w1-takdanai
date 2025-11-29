@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const MyHomePage(),
-        '/SecondPage': (context) => SecondPage(),
+        '/SecondPage': (context) => const SecondPage(),
       },
     );
   }
@@ -36,7 +36,7 @@ class MyHomePage extends StatelessWidget {
             Container(
               padding: EdgeInsets.symmetric(vertical: 15),
               width: double.infinity,
-              decoration: BoxDecoration(color: Colors.orange[400]),
+              decoration: BoxDecoration(color: Colors.yellow),
 
               child: Column(
                 children: [
@@ -46,16 +46,19 @@ class MyHomePage extends StatelessWidget {
                       fontFamily: 'Kanit',
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
+
                   SizedBox(height: 15),
+
                   Container(
                     padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       shape: BoxShape.circle,
                     ),
+
                     child: ClipOval(
                       child: Image.network(
                         "https://www.politico.com/dims4/default/resize/1290/quality/90/format/webp?url=https%3A%2F%2Fstatic.politico.com%2F78%2F09%2F0030a6a14a67bda8c162dcdcf225%2F201216-snowden-getty-773.jpg",
@@ -65,19 +68,22 @@ class MyHomePage extends StatelessWidget {
                       ),
                     ),
                   ),
+
                   SizedBox(height: 15),
+
                   Text(
                     "Takdanai Duangporn",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontFamily: 'Kanit',
                       fontSize: 18,
                     ),
                   ),
+
                   Text(
                     "takdanai.duangporn@e-tech.ac.th",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontFamily: 'Kanit',
                       fontSize: 18,
                     ),
@@ -85,17 +91,22 @@ class MyHomePage extends StatelessWidget {
                 ],
               ),
             ),
+
             Container(
               width: double.infinity,
               padding: EdgeInsets.all(15),
+
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+
                 children: [
                   Text(
                     "ข้อมูลส่วนตัว",
                     style: TextStyle(fontFamily: 'Kanit', fontSize: 18),
                   ),
+
                   SizedBox(height: 10),
+
                   Row(
                     children: [
                       Container(
@@ -104,16 +115,21 @@ class MyHomePage extends StatelessWidget {
                           color: Colors.green[100],
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
+
                         child: Icon(Icons.phone, color: Colors.green),
                       ),
+
                       SizedBox(width: 15),
+
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+
                         children: [
                           Text(
                             "เบอร์โทรศัพท์",
                             style: TextStyle(fontFamily: 'Kanit', fontSize: 16),
                           ),
+
                           Text(
                             "082-562-4732",
                             style: TextStyle(fontFamily: 'Kanit', fontSize: 16),
@@ -122,7 +138,9 @@ class MyHomePage extends StatelessWidget {
                       ),
                     ],
                   ),
+
                   SizedBox(height: 5),
+
                   Row(
                     children: [
                       Container(
@@ -131,16 +149,21 @@ class MyHomePage extends StatelessWidget {
                           color: Colors.pink[100],
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
+
                         child: Icon(Icons.cake, color: Colors.pink),
                       ),
+
                       SizedBox(width: 15),
+
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+
                         children: [
                           Text(
                             "วันเกิด",
                             style: TextStyle(fontFamily: 'Kanit', fontSize: 16),
                           ),
+
                           Text(
                             "5 ตุลาคม 2568",
                             style: TextStyle(fontFamily: 'Kanit', fontSize: 16),
@@ -149,7 +172,9 @@ class MyHomePage extends StatelessWidget {
                       ),
                     ],
                   ),
+
                   SizedBox(height: 5),
+
                   Row(
                     children: [
                       Container(
@@ -158,16 +183,21 @@ class MyHomePage extends StatelessWidget {
                           color: Colors.blue[100],
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
+
                         child: Icon(Icons.pin_drop, color: Colors.blue),
                       ),
+
                       SizedBox(width: 15),
+
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+
                         children: [
                           Text(
                             "ที่อยู่",
                             style: TextStyle(fontFamily: 'Kanit', fontSize: 16),
                           ),
+
                           Text(
                             "ชลบุรี",
                             style: TextStyle(fontFamily: 'Kanit', fontSize: 16),
@@ -176,7 +206,9 @@ class MyHomePage extends StatelessWidget {
                       ),
                     ],
                   ),
+
                   SizedBox(height: 5),
+
                   Row(
                     children: [
                       Container(
@@ -187,14 +219,18 @@ class MyHomePage extends StatelessWidget {
                         ),
                         child: Icon(Icons.school, color: Colors.purple),
                       ),
+
                       SizedBox(width: 15),
+
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+
                         children: [
                           Text(
                             "การศึกษา",
                             style: TextStyle(fontFamily: 'Kanit', fontSize: 16),
                           ),
+
                           Text(
                             "วิทยาลัยเทคโนโลยีภาคตะวันออก (อี.เทค)",
                             style: TextStyle(fontFamily: 'Kanit', fontSize: 16),
@@ -203,17 +239,26 @@ class MyHomePage extends StatelessWidget {
                       ),
                     ],
                   ),
+
                   SizedBox(height: 10),
-                  Container(
+
+                  // Navigation Btn
+                  SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () =>
                           Navigator.pushNamed(context, '/SecondPage'),
-                      child: Text("หน้าต่อไป"),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.orange,
-                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.yellow,
+                        foregroundColor: Colors.black,
                       ),
+
+                      child: Text("หน้าต่อไป",
+                        style: TextStyle(
+                          fontFamily: 'Kanit',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                        ),),
                     ),
                   ),
                 ],
@@ -228,6 +273,8 @@ class MyHomePage extends StatelessWidget {
 
 // 2nd Page
 class SecondPage extends StatelessWidget {
+  const SecondPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -249,7 +296,7 @@ class SecondPage extends StatelessWidget {
                     ),
                   ),
 
-                  SizedBox(width: 20),
+                  SizedBox(width: 10),
 
                   Column(
                     children: [
@@ -257,10 +304,11 @@ class SecondPage extends StatelessWidget {
                         "5",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 18,
+                          fontSize: 16,
                         ),
                       ),
-                      Text("กำลังติดตาม"),
+
+                      Text("กำลังติดตาม", style: TextStyle(fontSize: 12)),
                     ],
                   ),
 
@@ -276,10 +324,11 @@ class SecondPage extends StatelessWidget {
                         "1.55 M",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 18,
+                          fontSize: 16,
                         ),
                       ),
-                      Text("ผู้ติดตาม"),
+
+                      Text("ผู้ติดตาม", style: TextStyle(fontSize: 12)),
                     ],
                   ),
 
@@ -295,10 +344,11 @@ class SecondPage extends StatelessWidget {
                         "590.7 K",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 18,
+                          fontSize: 16,
                         ),
                       ),
-                      Text("ถูกใจและบันทึก"),
+
+                      Text("ถูกใจและบันทึก", style: TextStyle(fontSize: 12)),
                     ],
                   ),
                 ],
@@ -312,8 +362,7 @@ class SecondPage extends StatelessWidget {
               width: double.infinity,
 
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-
+                // crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
@@ -332,11 +381,11 @@ class SecondPage extends StatelessWidget {
                     ],
                   ),
 
-                  SizedBox(height: 15),
+                  SizedBox(height: 10),
 
                   Row(
                     children: [
-                      Icon(Icons.tiktok, size: 20),
+                      Icon(Icons.tiktok, size: 12),
 
                       SizedBox(width: 5),
 
@@ -355,12 +404,12 @@ class SecondPage extends StatelessWidget {
               child: Row(
                 children: [
                   SizedBox(
-                    width: 330,
+                    width: 290,
 
                     child: FilledButton(
                       onPressed: () {},
                       style: FilledButton.styleFrom(
-                        backgroundColor: Colors.yellow[600],
+                        backgroundColor: Colors.yellow[500],
                         foregroundColor: Colors.black,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -371,37 +420,38 @@ class SecondPage extends StatelessWidget {
                         "ติดตาม",
                         style: TextStyle(
                           fontFamily: 'Kanit',
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
                         ),
                       ),
                     ),
                   ),
 
-                  SizedBox(width: 15),
+                  SizedBox(width: 20),
 
-                  Icon(Icons.settings),
+                  Icon(Icons.share, size: 18,),
                 ],
               ),
             ),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
+
               children: [
                 SizedBox(
                   width: 180,
-                  height: 200,
+                  height: 220,
                   child: Image.network(
                     "https://media.npr.org/assets/img/2019/09/18/freshair2_wide-749c0436c788133c1374bfd82e486827447574ac.jpg?s=800&c=85&f=webp",
                     fit: BoxFit.cover,
                   ),
                 ),
 
-                SizedBox(width: 15,),
+                SizedBox(width: 5),
 
                 SizedBox(
                   width: 180,
-                  height: 200,
+                  height: 220,
                   child: Image.network(
                     "https://fortune.com/img-assets/wp-content/uploads/2024/06/GettyImages-459251249-e1718388631239.jpg?format=webp&w=768&q=75",
                     fit: BoxFit.cover,
