@@ -217,6 +217,7 @@ class MyHomePage extends StatelessWidget {
                           color: Colors.purple[100],
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
+
                         child: Icon(Icons.school, color: Colors.purple),
                       ),
 
@@ -253,12 +254,14 @@ class MyHomePage extends StatelessWidget {
                         foregroundColor: Colors.black,
                       ),
 
-                      child: Text("หน้าต่อไป",
+                      child: Text(
+                        "หน้าต่อไป",
                         style: TextStyle(
                           fontFamily: 'Kanit',
                           fontSize: 16,
                           fontWeight: FontWeight.w300,
-                        ),),
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -281,6 +284,7 @@ class SecondPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
+            // Box 1
             Container(
               padding: EdgeInsets.all(15),
               width: double.infinity,
@@ -357,6 +361,7 @@ class SecondPage extends StatelessWidget {
 
             SizedBox(height: 15),
 
+            // Box 2
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
               width: double.infinity,
@@ -397,6 +402,7 @@ class SecondPage extends StatelessWidget {
               ),
             ),
 
+            // Box 3
             Container(
               padding: EdgeInsets.all(15),
               width: double.infinity,
@@ -406,9 +412,9 @@ class SecondPage extends StatelessWidget {
                   SizedBox(
                     width: 290,
 
-                    child: FilledButton(
+                    child: ElevatedButton(
                       onPressed: () {},
-                      style: FilledButton.styleFrom(
+                      style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.yellow[500],
                         foregroundColor: Colors.black,
                         shape: RoundedRectangleBorder(
@@ -429,18 +435,21 @@ class SecondPage extends StatelessWidget {
 
                   SizedBox(width: 20),
 
-                  Icon(Icons.share, size: 18,),
+                  Icon(Icons.share, size: 18),
                 ],
               ),
             ),
 
+            // Post Images
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
+              // crossAxisAlignment: CrossAxisAlignment.end,
 
               children: [
                 SizedBox(
                   width: 180,
                   height: 220,
+
                   child: Image.network(
                     "https://media.npr.org/assets/img/2019/09/18/freshair2_wide-749c0436c788133c1374bfd82e486827447574ac.jpg?s=800&c=85&f=webp",
                     fit: BoxFit.cover,
@@ -452,6 +461,7 @@ class SecondPage extends StatelessWidget {
                 SizedBox(
                   width: 180,
                   height: 220,
+
                   child: Image.network(
                     "https://fortune.com/img-assets/wp-content/uploads/2024/06/GettyImages-459251249-e1718388631239.jpg?format=webp&w=768&q=75",
                     fit: BoxFit.cover,
